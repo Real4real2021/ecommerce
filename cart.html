@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--=============== BOXICONS ===============-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+
+    <!--=============== SWIPER CSS ===============-->
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/colors/color-1.css">
+
+    <title>Responsive e-commerce website - Crypticalcoder</title>
+</head>
+<body>
+    <!--=============== HEADER ===============-->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="index.html">
+                <i class="bx bxs-shopping-bags nav__logo-icon">AkwaMens</i>
+            </a>
+            <div class="class__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav_item">
+                        <a href="index.html" class="nav__link">Home</a>
+                    </li>
+                    <li class="nav_item">
+                        <a href="about.html" class="nav__link">About</a>
+                    </li>
+                    <li class="nav_item">
+                        <a href="contact.html" class="nav__link">Contact</a>
+                    </li>
+                    <li class="nav_item">
+                        <a href="cart.html" class="btn btn-cta">Cart</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="blog.html" class="btn btn-cta">Blog</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="shop.html" class="btn btn-cta">Shop</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="faq.html" class="btn btn-cta">FAQ</a>
+                    </li>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="nav__btns">
+                <div class="Login__toggle" id="Login-toggle">
+                    <i class="bx bx-user"></i>
+                </div>
+                <div class="nav__shop" id="cart-shop">
+                    <i class="bx bx-shopping-bag"></i>
+                </div>
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class="bx bx-grid-alt"></i>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!--=============== CART ===============-->
+    <div class="cart" id="cart">
+        <i class="bx bx-x cart__close"></i>
+        <h2 class="cart__title-center">My Cart</h2>
+        <div class="cart__container">
+            <article class="cart__card">
+                <div class="cart__box">
+                    <img src="assets/img/cart-1.png" alt="" class="cart__img">
+                </div>
+
+                <div class="cart__details">
+                    <h3 class="cart__title">Test Item</h3>
+                    <span class="cart__price">R10.00</span>
+
+                    <div class="cart__amount">
+                        <div class="cart__amount-content">
+                            <span class="cart__amount-box">
+                                <i class="bx bx-minus"></i>
+                            </span>
+                            <span class="cart__amount-number">1</span>
+
+                            <span class="cart__amount-box">
+                                <i class="bx bx-plus"></i>
+                            </span>
+                        </div>
+
+                        <i class="bx bx-trash-alt cart__amount-trash"></i>
+                    </div>
+                </div>
+            </article>
+
+            <article class="cart__card">
+                <div class="cart__box">
+                    <img src="assets/img/cart-3.png" alt="" class="cart__img">
+                </div>
+
+                <div class="cart__details">
+                    <h3 class="cart__title">Test Item 2</h3>
+                    <span class="cart__price">R10.00</span>
+
+                    <div class="cart__amount">
+                        <div class="cart__amount-content">
+                            <span class="cart__amount-box">
+                                <i class="bx bx-minus"></i>
+                            </span>
+                            <span class="cart__amount-number">1</span>
+
+                            <span class="cart__amount-box">
+                                <i class="bx bx-plus"></i>
+                            </span>
+                        </div>
+
+                        <i class="bx bx-trash-alt cart__amount-trash"></i>
+                    </div>
+                </div>
+            </article>
+
+            <article class="cart__card">
+                <div class="cart__box">
+                    <img src="assets/img/cart-2.png" alt="" class="cart__img">
+                </div>
+
+                <div class="cart__details">
+                    <h3 class="cart__title">Test Item 3</h3>
+                    <span class="cart__price">R10.00</span>
+
+                    <div class="cart__amount">
+                        <div class="cart__amount-content">
+                            <span class="cart__amount-box">
+                                <i class="bx bx-minus"></i>
+                            </span>
+                            <span class="cart__amount-number">1</span>
+
+                            <span class="cart__amount-box">
+                                <i class="bx bx-plus"></i>
+                            </span>
+                        </div>
+
+                        <i class="bx bx-trash-alt cart__amount-trash"></i>
+                    </div>
+                </div>
+            </article>
+        </div>
+
+        <div class="cart__prices">
+            <span class="cart__prices-item">3 items</span>
+            <span class="cart__prices-total">R10</span>
+        </div>
+    </div>
+
+    <!--=============== LOGIN ===============-->
+    <div class="login" id="login">
+        <i class="bx bx-x login__close" id="login-close"></i>
+
+        <h2 class="login__title-center">Login</h2>
+
+        <form action="" class="Login__form grid">
+            <div class="login__content">
+                <label for="" class="login__label">Email</label>
+                <input type="email" name="" id="" class="login__input">
+            </div>
+            <div class="login__content">
+                <label for="" class="login__label">Email</label>
+                <input type="password" name="" id="" class="login__input">
+            </div>
+
+            <div>
+                <a href="#" class="button">Sign in</a>
+            </div>
+
+            <div>
+                <p class="signup">Not a member? <a href="registration.html">Sign up Now</a></p>
+            </div>
+        </form>
+    </div>
+
+    <!--=============== MAIN ===============-->
+    <main class="main">
+        <!--=============== CART ===============-->
+        <section class="section section__height" id="cart">
+            <h2 class="section__title">Your Cart</h2>
+    
+            <div class="cart__container container grid">
+              <!-- Cart items will be added here dynamically -->
+              <div class="cart__item" id="cart-item-template" style="display: none;">
+                <div class="cart__img">
+                  <img src="" alt="" class="cart__img-src" />
+                </div>
+    
+                <div class="cart__content">
+                  <h3 class="cart__title"></h3>
+                  <span class="cart__price"></span>
+                  <span class="cart__stock">In stock: </span>
+    
+                  <div class="cart__amount">
+                    <div class="cart__amount-content">
+                      <span class="cart__amount-box minus" data-action="decrease"
+                        >-</span
+                      >
+                      <input
+                        type="text"
+                        class="cart__amount-number"
+                        value="1"
+                        readonly
+                        />
+                      <span class="cart__amount-box plus" data-action="increase"
+                        >+</span
+                      >
+                    </div>
+                  </div>
+    
+                  <i class="bx bx-trash-alt cart__delete" data-action="remove"></i>
+                </div>
+              </div>
+            </div>
+    
+            <div class="cart__prices container grid">
+              <div class="cart__prices-content">
+                <span class="cart__prices-item">Items: <span id="cart-count">0</span></span>
+                <span class="cart__prices-item"
+                  >Subtotal: $<span id="cart-subtotal">0.00</span></span
+                >
+              </div>
+    
+              <a href="#" class="button button--flex" id="checkout-button">
+                Checkout <i class="bx bx-right-arrow-alt button__icon"></i>
+              </a>
+            </div>
+          </section>
+    </main>
+
+    <!--=============== FOOTER ===============-->
+    <footer class="footer section">
+        
+    </footer>
+
+    <!--=============== SCROLL UP ===============-->
+
+    <!--=============== STYLE SWITCHER ===============-->
+    
+    <!--=============== SWIPER JS ===============-->
+    <script src="assets/js/swiper-bundle.min.js"></script>
+
+    <!--=============== JS ===============-->
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
