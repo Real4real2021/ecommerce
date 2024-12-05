@@ -11,6 +11,7 @@ newProducts.forEach(product => {
       <img src="${product.product__image}" alt="" class="shop__img">
       <h3 class="shop__title">${product.product__name}</h3>
       <span class="shop__subtitle">${product.product__category}</span>
+      <span class="shop__subtitle"><a href="${product.company__name}.html">${product.company__name}</a></span>
 
       <div class="shop__prices">
           <span class="shop__price">${product.product__price}</span>
@@ -25,3 +26,8 @@ newProducts.forEach(product => {
 
   productsContainer.insertAdjacentHTML('beforeend', html);
 });
+
+const breadcrumbTitle = document.querySelector('.breadcrumb__title');
+breadcrumbTitle.innerHTML = newProducts[0].company__name;
+
+const breadcrumbSubtitle = document.querySelector('.breadcrumb__subtitle');
