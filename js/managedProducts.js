@@ -23,34 +23,16 @@ const productPriceInput = document.getElementById('productPrice');
 const productDescriptionInput = document.getElementById('productDescription');
 const productImageInput = document.getElementById('productImage');
 const button = document.getElementById('inputButton');
-let numberOfProducts = document.getElementById('numberOfProducts');
-
-localStorage.setItem('products', JSON.stringify(products));
-
-function addProduct() {
-  
-}
 
 button.addEventListener('click', ()=>{
-  console.log('it worked');
+  alert(products);
   products.push({
-    productName: productNameInput.value,
-    productCategory: productCategoryInput.value,
-    productPrice: productPriceInput.value,
-    productDescription: productDescriptionInput.value,
-    productImage: productImageInput.value,
+    product__name: productNameInput.value,
+    product__category: productCategoryInput.value,
+    product__price: productPriceInput.value,
+    product__description: productDescriptionInput.value,
+    product__image: productImageInput.value,
+    company__name: 'AkwaMens'
   });
+  localStorage.setItem('products', JSON.stringify(products));
 })
-
-export let newProducts = JSON.parse(localStorage.getItem('products'));
-
-if(newProducts.length < 1){
-  numberOfProducts.innerHTML = "0"
-}else{
-  numberOfProducts = newProducts.length;
-}
-
-// products.forEach(product => {
-//   numberOfProducts.innerHTML = products.length;
-//   console.log(numberOfProducts.innerHTML);
-// })

@@ -1,5 +1,3 @@
-import { newProducts } from './managedProducts.js';
-
 // SIDEBAR TOGGLE
 
 let sidebarOpen = false;
@@ -257,8 +255,10 @@ areaChart.render();
 
 const numberOfProducts = document.getElementById('numberOfProducts')
 
-if (newProducts.length < 1){
+const products = JSON.parse(localStorage.getItem('products'));
+
+if (products.length < 1){
   numberOfProducts.innerHTML = "0"
 }else{
-  numberOfProducts.innerHTML = newProducts.length
+  numberOfProducts.innerHTML = products.length
 }

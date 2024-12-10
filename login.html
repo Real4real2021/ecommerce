@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <form action="index.html" id="registerForm">
+        <div>
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username">
+        </div>
+        <div>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email">
+        </div>
+        <div>
+            <label for="password">Password:</label>
+            <input type="password" id="regPassword" name="password">
+        </div>
+        <div>
+            <label for="isMerchant">Is Merchant:</label>
+            <input type="checkbox" id="isMerchant" name="isMerchant">
+        </div>
+        <button type="submit">Register</button>
+    </form><br><br>
+
+    <form action="submit" id="loginForm">
+        <div>
+            <label for="identifier">Username/Email:</label>
+            <input type="text" id="identifier" name="identifier">
+        </div>
+        <div>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password">
+        </div>
+        <button type="submit">Login</button>
+    </form><br><br>
+
+    <div id="auth-menu">
+        <button onclick="logout()">Logout</button>
+    </div>
+</body>
+</html>
