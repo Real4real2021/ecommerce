@@ -702,7 +702,45 @@ input {
 
 
 /*=============== BLOG PAGE ===============*/
+.blog__container{
+    row-gap: 1.8rem;
+}
 
+.blog__post{
+    grid-template-columns: .8fr 1.2fr;
+    column-gap: 2rem;
+    align-items: center;
+    background-color: var(--container-color);
+    border-radius: 1.2rem;
+    padding: 1.4rem;
+}
+
+.blog__img {
+    border-radius: .8rem;
+}
+
+.blog__details {
+    font-size: var(--small-font-size);
+    text-align: justify;
+    margin-bottom: var(--mb-1);
+}
+
+.blog__title {
+    font-size: var(--h3-font-size);
+    font-weight: var(--font-medium);
+    margin-bottom: var(--mb-0-5);
+}
+
+.blog__date {
+    font-size: var(--smaller-font-size);
+    color: var(--text-color);
+    margin-bottom: var(--mb-0-75);
+}
+
+
+.read__more {
+    text-align: right;
+}
 
 /*=============== CART PAGE ===============*/
 .cart__page{
@@ -710,10 +748,70 @@ input {
 }
 
 /*=============== FAQ PAGE ===============*/
+.questions__container{
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+}
+
+.questions__group{
+    display: grid;
+    row-gap: 2rem;
+}
+
+.question__item{
+    background-color: var(--container-color);
+    border-radius: .25rem;
+}
+
+.questions__item-title{
+    font-size: var(--small-font-size);
+    font-weight: var(--font-medium);
+}
+
+.question__icon{
+    font-size: 1.25rem;
+    color: var(--title-color);
+}
+
+.questions__description{
+    font-size: var(--small-font-size);
+    padding: 1 3.5rem 2.25rem 2.75rem;
+}
+
+.questions_-header {
+    display: flex;
+    align-items: center;
+    column-gap: .5rem;
+    padding: 1rem;
+    cursor: pointer;
+}
+
+.questions__content{
+    overflow: hidden;
+    height: 0;
+}
+
+.questions__item,
+.questions__header,
+.questions__item-title,
+.questions__icon,
+.questions__description,
+.questions__content{
+    transition: var(--small-font-size);
+}
 
 
 /*Rotate icon, change color of titles and background*/
+.accordian-open .quesions__header,
+.accordian-open .questions__content {
+    background-color: var(--first-color);
+}
 
+.accordian-open .questions__item-title,
+.accordian-open .questions__description,
+.accordian-open .questions__icon {
+    background-color: #fff;
+}
 
 /*=============== REGISTRATION PAGE ===============*/
 
