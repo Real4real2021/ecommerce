@@ -1,3 +1,45 @@
+import { products, categories, customers } from "./backend.js";
+
+function loading() {
+  console.log("loading");
+}
+
+let skipLoading = false;
+
+async function post(url, data, options = {}) {
+  const { timeout = 8000 } = options;
+  const controller = new AbortController();
+  const id = setTimeout(() => controller.abort(), timeout);
+  if (!url.includes("notifications")) {
+    if (!skipLoading) loading();
+    const responseText = await fetch(url, {
+      method: "POST",
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      },
+      ...options,
+      body: JSON.stringify(data),
+    });
+    clearTimeout(id);
+    if (!skipLoading) loading();
+    if (skipLoading) skipLoading = false;
+    return responseText.json();
+  }
+  const responseText = await fetch(url, {
+    method: "POST",
+    headers: {
+      Accept: "application/json",
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(data),
+  }).catch((error) => {
+    console.log(error);
+  });
+  if (skipLoading) skipLoading = false;
+  return responseText.json();
+}
+
 // ---------- CHARTS ----------
 
 // BAR CHART
@@ -233,14 +275,28 @@ const areaChart = new ApexCharts(
 );
 areaChart.render();
 
+const numberOfProducts = document.getElementById('numberOfProducts');
+const numberOfCategories = document.getElementById('numberOfCategories');
+const numberOfCustomers = document.getElementById('numberOfCustomers');
 
-const numberOfProducts = document.getElementById('numberOfProducts')
-
-const products = JSON.parse(localStorage.getItem('products'));
-console.log(products.length)
-
-if (products.length < 1){
-  numberOfProducts.innerHTML = "0"
-}else{
-  numberOfProducts.innerHTML = `${products.length}`
+async function countProducts(){
+  products.map((product)=>{
+      numberOfProducts.innerHTML ++ 
+  });
 }
+
+async function countCategories(){ 
+  categories.map((category)=>{
+      numberOfCategories.innerHTML ++ 
+  });
+}
+
+async function countCustomers(){
+  customers.map((customer)=>{
+      numberOfCustomers.innerHTML ++ 
+  });
+}
+
+countProducts();
+countCategories();
+countCustomers();

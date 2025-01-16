@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Categories Page</title>
+
+    <!-- Montserrat Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body>
+    <div class="grid-container">
+        <!-- Header -->
+        <header class="header">
+            <div class="menu-icon" id="openNav">
+                <span class="material-icons-outlined">menu</span>
+            </div>
+            <div class="header-left">
+                <span class="material-icons-outlined">search</span>
+            </div>
+            <div class="header-right">
+                <span class="material-icons-outlined">notifications</span>
+                <span class="material-icons-outlined">email</span>
+                <span class="material-icons-outlined">account_circle</span>
+            </div>
+        </header>
+        <!-- End Header -->
+
+        <!-- Sidebar -->
+        <aside id="sidebar">
+          <div class="sidebar-title">
+            <div class="sidebar-brand">
+              <span class="material-icons-outlined">shopping_cart</span> DASHBOARD
+            </div>
+            <span class="material-icons-outlined" id="closeNav">close</span>
+          </div>
+  
+          <ul class="sidebar-list">
+            <li class="sidebar-list-item">
+              <a href="dashboard.html" target="_self">
+                <span class="material-icons-outlined">dashboard</span> Dashboard
+              </a>
+            </li>
+            <li class="sidebar-list-item">
+              <a href="products.html" target="_self">
+                <span class="material-icons-outlined">inventory_2</span> Products
+              </a>
+            </li>
+            <li class="sidebar-list-item">
+              <a href="categories.html" target="_self">
+                <span class="material-icons-outlined">category</span> Categories
+              </a>
+            </li>
+            <li class="sidebar-list-item">
+              <a href="customers.html" target="_self">
+                <span class="material-icons-outlined">groups</span> Customers
+              </a>
+            </li>
+            <!-- <li class="sidebar-list-item">
+              <a href="inventory.html" target="_self">
+                <span class="material-icons-outlined">fact_check</span> Inventory
+              </a>
+            </li> -->
+            <li class="sidebar-list-item">
+              <a href="reports.html" target="_self">
+                <span class="material-icons-outlined">poll</span> Reports
+              </a>
+            </li>
+            <li class="sidebar-list-item">
+              <a href="settings.html" target="_self">
+                <span class="material-icons-outlined">settings</span> Settings
+              </a>
+            </li>
+            <li class="sidebar-list-item">
+              <a href="index.html" target="_self">
+                <span class="material-icons-outlined"></span> Back
+              </a>
+            </li>
+          </ul>
+        </aside>
+        <!-- End Sidebar -->
+
+        <!-- Main -->
+        <main class="main-container">
+            <div class="main-title">
+                <h2>SETTINGS</h2>
+              </div>
+            <div class="settings-container">
+
+                <!-- Account Settings -->
+                <div class="settings-section">
+                    <h3>Account</h3>
+                    <div class="settings-option">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" value="John Doe">
+                    </div>
+                    <div class="settings-option">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" value="john.doe@example.com">
+                    </div>
+                    <div class="settings-option">
+                        <label for="password">Password:</label>
+                        <input type="password" id="password" name="password">
+                        <button type="button">Change Password</button>
+                    </div>
+                </div>
+
+                <!-- Profile Settings -->
+                <div class="settings-section">
+                    <h3>Profile</h3>
+                    <div class="settings-option">
+                        <label for="profile-picture">Profile Picture:</label>
+                        <input type="file" id="profile-picture" name="profile-picture">
+                    </div>
+                    <div class="settings-option">
+                        <label for="bio">Bio:</label>
+                        <textarea id="bio" name="bio" rows="4"></textarea>
+                    </div>
+                </div>
+
+                <!-- Theme Settings -->
+                <div class="settings-section">
+                  <h3>Theme</h3>
+                  <div class="settings-option">
+                    <label for="theme">Theme Color:</label>
+                    <select id="theme">
+                      <option value="dark">Dark</option>
+                      <option value="light">Light</option>
+                    </select>
+                  </div>
+                  <div class="settings-option">
+                    <label for="font-size">Font Size:</label>
+                    <select id="font-size">
+                      <option value="small">Small</option>
+                      <option value="medium">Medium</option>
+                      <option value="large">Large</option>
+                    </select>
+                  </div>
+                </div>
+                
+                <!-- Notification Settings -->
+                <div class="settings-section">
+                  <h3>Notifications</h3>
+                  <div class="settings-option">
+                    <label>
+                      <input type="checkbox" id="email-notifications" name="email-notifications" checked>
+                      Enable Email Notifications
+                    </label>
+                  </div>
+                  <div class="settings-option">
+                    <label>
+                      <input type="checkbox" id="push-notifications" name="push-notifications">
+                      Enable Push Notifications
+                    </label>
+                  </div>
+                </div>
+
+                <!-- Currency Settings -->
+              <div class="settings-section">
+                <h3>Currency</h3>
+                <div class="settings-option">
+                  <label for="currency">Select Currency:</label>
+                  <select id="currency">
+                    <option value="USD">USD - US Dollar</option>
+                    <option value="EUR">EUR - Euro</option>
+                    <option value="JPY">JPY - Japanese Yen</option>
+                    <option value="GBP">GBP - British Pound</option>
+                    <option value="ZAR">ZAR - South African Rand</option>
+                    <!-- Add more currencies as needed -->
+                  </select>
+                </div>
+              </div>
+              
+              <!-- Language Settings -->
+              <div class="settings-section">
+                <h3>Language</h3>
+                <div class="settings-option">
+                  <label for="language">Select Language:</label>
+                  <select id="language">
+                    <option value="en">English</option>
+                    <option value="es">Español</option>
+                    <option value="fr">Français</option>
+                    <option value="de">Deutsch</option>
+                    <option value="zh">中文</option>
+                    <!-- Add more languages as needed -->
+                  </select>
+                </div>
+              </div>
+              
+              <!-- Privacy Settings -->
+              <div class="settings-section">
+                <h3>Privacy</h3>
+                <div class="settings-option">
+                  <label>
+                    <input type="checkbox" id="private-profile" name="private-profile">
+                    Make Profile Private
+                  </label>
+                </div>
+                <div class="settings-option">
+                  <label>
+                    <input type="checkbox" id="show-activity" name="show-activity" checked>
+                    Show My Activity
+                  </label>
+                </div>
+              </div>
+
+                <!-- Save Button -->
+                <div class="settings-option">
+                    <button type="button" id="save-settings">Save Settings</button>
+                </div>
+
+            </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.35.5/apexcharts.min.js"></script>
+    <!-- Custom JS -->
+    <script type="module" src="js/script.js"></script>
+    <script src="js/nav.js"></script>
+</body>
+</html>

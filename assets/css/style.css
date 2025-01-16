@@ -160,12 +160,14 @@ input {
     align-items: center;
     column-gap: 3rem;
 }
+
 .nav__toggle,
 .nav__logo,
 .nav__toggle,
 .nav__shop {
     color:var(--title-color)
 }
+
 .nav__logo{
     text-transform: lowercase;
     font-weight: var(--font-bold);
